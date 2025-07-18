@@ -1,0 +1,44 @@
+/* src/styles/Home.css */
+.landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #d8c0c0;
+  }
+  
+  .landing-text {
+    max-width: 50%;
+  }
+  
+  .landing-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 50px 20px;
+    background-color: #b59b9c;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  /* Services Section */
+  .services-section {
+    padding: 50px 20px;
+    background-color: #b86166;
+    color: white;
+  }

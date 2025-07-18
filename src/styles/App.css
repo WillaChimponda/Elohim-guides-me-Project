@@ -1,0 +1,36 @@
+/* src/styles/App.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .floating-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #5faab6;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  
+  .nav-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+  }
+  
+  .nav-list li {
+    margin-right: 20px;
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+  }
+  .account{
+    text-decoration: none;
+    display:flex;
+    justify-content: space-between;
+    color:
+  }

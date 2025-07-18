@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Calculator</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: pink;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calculator {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+            padding: 30px;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #333;
+            color: pink;
+        }
+        button {
+            background-color: pink;
+            color: black;
+            border: none;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            flex: 1;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .full-width {
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" disabled />
+        <div class="button-row">
+            <button class="full-width" onclick="clearResult()">C</button>
+            <button onclick="appendToResult('/')">/</button>
+        </div>
+        <div class="button-row">
+            <button onclick="appendToResult('7')">7</button>
+            <button onclick="appendToResult('8')">8</button>
+            <button onclick="appendToResult('9')">9</button>
+            <button onclick="appendToResult('*')">*</button>
+        </div>
+        <div class="button-row">
+            <button onclick="appendToResult('4')">4</button>
+            <button onclick="appendToResult('5')">5</button>
+            <button onclick="appendToResult('6')">6</button>
+            <button onclick="appendToResult('-')">-</button>
+        </div>
+        <div class="button-row">
+            <button onclick="appendToResult('1')">1</button>
+            <button onclick="appendToResult('2')">2</button>
+            <button onclick="appendToResult('3')">3</button>
+            <button onclick="appendToResult('+')">+</button>
+        </div>
+        <div class="button-row">
+            <button class="full-width" onclick="appendToResult('0')">0</button>
+            <button onclick="calculateResult()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculateResult() {
+            try {
+                document.getElementById('result').value = eval(document.getElementById('result').value);
+            } catch (error) {
+                document.getElementById('result').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

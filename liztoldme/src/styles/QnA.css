@@ -1,0 +1,224 @@
+.qna-main-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: #f3f7f9;
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+}
+
+.qna-sidebar {
+  width: 200px;
+  min-width: 140px;
+  padding: 0 0 0 12px;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-right: 2px solid #e0dede;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  position: sticky;
+  top: 0;
+}
+
+.qna-user-box {
+  background: #fff;
+  border: 1.5px solid #b59b9c;
+  border-radius: 10px;
+  padding: 10px 18px;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.qna-welcome {
+  color: #a86c6c;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.qna-logout-btn {
+  background: #a86c6c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: background 0.2s;
+}
+
+.qna-logout-btn:hover {
+  background: #8d5757;
+}
+
+.qna-bg {
+  flex: 1;
+  padding: 100px 0 40px 0;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.qna-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a86c6c;
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+.qna-form-card {
+  background: #fff;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.qna-textarea {
+  min-height: 90px;
+  border: 1.5px solid #e0dede;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  resize: vertical;
+  color: #555;
+  background: #faf9f9;
+}
+.qna-submit-btn {
+  background: #a86c6c;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.qna-submit-btn:hover {
+  background: #8d5757;
+}
+.qna-card {
+  background: #fff;
+  max-width: 700px;
+  margin: 0 auto 24px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  padding: 24px 28px 20px 28px;
+}
+.qna-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.qna-avatar {
+  width: 38px;
+  height: 38px;
+  background: #e0dede;
+  color: #a86c6c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.qna-user {
+  font-weight: 600;
+  color: #a86c6c;
+  margin-right: 10px;
+}
+.qna-date {
+  color: #b0a6a6;
+  font-size: 0.95rem;
+}
+.qna-question {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 18px;
+  margin-left: 50px;
+}
+.qna-response-block {
+  background: #f6f2f2;
+  border-radius: 7px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  margin-left: 50px;
+}
+.qna-response-title {
+  color: #a86c6c;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+.qna-response {
+  color: #444;
+  font-size: 1.05rem;
+}
+.qna-actions {
+  display: flex;
+  gap: 18px;
+  margin-left: 50px;
+}
+.qna-action-btn {
+  background: none;
+  border: none;
+  color: #a86c6c;
+  font-size: 1.05rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.qna-action-btn:hover {
+  color: #8d5757;
+}
+
+@media (max-width: 900px) {
+  .qna-main-layout {
+    flex-direction: column;
+    max-width: 100vw;
+  }
+  .qna-sidebar {
+    flex-direction: row;
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #e0dede;
+    margin-right: 0;
+    margin-bottom: 30px;
+    height: auto;
+    justify-content: flex-start;
+    padding: 30px 0 0 0;
+    position: static;
+  }
+  .qna-bg {
+    max-width: 100vw;
+    padding: 40px 0 40px 0;
+  }
+} 
